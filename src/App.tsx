@@ -1,7 +1,8 @@
 import React from "react";
+import Tweet from "./components/Tweet/Tweet";
 
 function App() {
-  return <h1>OI GENTE!!!!</h1>;
+  return <Tweet />;
 }
 
 export default App;
