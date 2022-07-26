@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import img from "../../assets/image/image.png";
+import React from 'react';
+import styled from 'styled-components';
+import img from '../../assets/image/image.png';
 
 const TweetStyled = styled.div`
   width: 600px;
@@ -20,7 +20,7 @@ const Tweet: React.FC = () => {
   return (
     <TweetStyled>
       <div>
-        <img src={img} />
+        <img src={img} alt='imagem-logo-twitter' />
       </div>
       <div>texto</div>
     </TweetStyled>
