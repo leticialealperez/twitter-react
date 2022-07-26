@@ -53,7 +53,7 @@ const TweetStyled = styled.div`
 
   .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-right: 50px;
   }
   
