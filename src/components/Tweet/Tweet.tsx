@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import React from "react";
 import styled from "styled-components";
 import img from "../../assets/image/image.png";
 import svg from "../../assets/image/verified.svg";
 import VerifiedIcon from "@mui/icons-material/Verified";
-=======
-import React from 'react';
-import styled from 'styled-components';
-import img from '../../assets/image/image.png';
->>>>>>> 8ef21ded9a219ffbacf676b89dbd27666ba695fd
 
 const TweetStyled = styled.div`
   width: 600px;
@@ -16,10 +10,7 @@ const TweetStyled = styled.div`
   background-color: black;
   border: 1px solid grey;
   display: flex;
-<<<<<<< HEAD
   font-family: "Roboto", sans-serif;
-=======
->>>>>>> 8ef21ded9a219ffbacf676b89dbd27666ba695fd
 
   img {
     width: 75px;
@@ -44,7 +35,6 @@ const Tweet: React.FC = () => {
   return (
     <TweetStyled>
       <div>
-<<<<<<< HEAD
         <img src={img} />
       </div>
       <div>
@@ -66,11 +56,6 @@ const Tweet: React.FC = () => {
           </p>
         </div>
       </div>
-=======
-        <img src={img} alt='imagem-logo-twitter' />
-      </div>
-      <div>texto</div>
->>>>>>> 8ef21ded9a219ffbacf676b89dbd27666ba695fd
     </TweetStyled>
   );
 };
