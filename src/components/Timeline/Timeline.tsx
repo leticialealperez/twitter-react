@@ -12,6 +12,9 @@ const Timeline: React.FC = () => {
       <Tweet />
       <Tweet />
       <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
     </TimelineStyled>
   );
 };
