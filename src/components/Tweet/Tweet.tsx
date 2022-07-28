@@ -1,69 +1,33 @@
 import React from 'react';
-import img from '../../assets/image/image.png';
-import VerifiedIcon from '@mui/icons-material/Verified';
-import { IconButton } from '@mui/material';
-import CropRotateIcon from '@mui/icons-material/CropRotate';
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import UploadIcon from '@mui/icons-material/Upload';
 import TweetStyled from './TweetStyled';
 
 const Tweet: React.FC = () => {
+  const imageUrl = 'https://avatars.githubusercontent.com/u/71561411?v=4';
   return (
     <TweetStyled>
+      <div className="tweet-container">
       <div>
-        <img src={img} alt='logo-twitter' />
-      </div>
-      <div>
-        <div className='subtitulos'>
-          <span className='nome-user'>
-            Twitter Brasil <VerifiedIcon fontSize='small' />
-          </span>
-          <span className='login-data'>
-            @TwitterBrasil &nbsp; • &nbsp; 20 de jul
-          </span>
+        <div className="avatar">
+          <img alt="" src={imageUrl} />
         </div>
-        <div className='caixa-texto'>
-          <p>
-            As conversas sobre as #Eleiçoes2022 estão a todo vapor! Foram 44
-            milhões de Tweets no 1º semestre sobre a corrida eleitoral
-            brasileira Para que essa conversa seja segura e informada, o Twitter
-            está reunindo esforços em diferentes frentes, e temos novidades para
-            compartilhar
-          </p>
-        </div>
-        <div className='buttons'>
-          <IconButton
-            color='primary'
-            aria-label='comment picture'
-            component='label'
-            size='small'
-          >
-            <ChatBubbleOutlineIcon />
-          </IconButton>
-          <IconButton
-            color='primary'
-            aria-label='upload picture'
-            component='label'
-          >
-            <CropRotateIcon />
-          </IconButton>
-          <IconButton
-            color='primary'
-            aria-label='upload picture'
-            component='label'
-          >
-            <FavoriteBorderIcon />
-          </IconButton>
-          <IconButton
-            color='primary'
-            aria-label='upload picture'
-            component='label'
-          >
-            <UploadIcon />
-          </IconButton>
+        <div className="tweet-body">
+          <div>
+            <p className="tweet-title">
+              TechHelper Joinha da Growdev
+              <span>
+                {'\t•\t'}
+                @xaxalautech
+              </span>
+              <span>
+                {'\t-\t'}
+                28 Jul
+              </span>
+            </p>
+            <p className="text-tweet">Ola gente, esse é meu primeiro tweet</p>
+          </div>
         </div>
       </div>
+    </div>
     </TweetStyled>
   );
 };
