@@ -13,14 +13,12 @@ const Tweet: React.FC = () => {
         <div className="tweet-body">
           <div>
             <p className="tweet-title">
-              TechHelper Joinha da Growdev
+              TechHelper Joinha da Growdev &nbsp;
               <span>
-                {'\t•\t'}
-                @xaxalautech
+                 •&nbsp; @xaxalautech &nbsp;
               </span>
               <span>
-                {'\t-\t'}
-                28 Jul
+                •&nbsp; 28 Jul
               </span>
             </p>
             <p className="text-tweet">Ola gente, esse é meu primeiro tweet</p>
