@@ -1,8 +1,12 @@
-import React from "react";
-import Tweet from "./components/Tweet/Tweet";
+import React from 'react';
+import Timeline from './components/Timeline/Timeline';
 
 function App() {
-  return <Tweet />;
+  return (
+    <>
+      <Timeline />
+    </>
+  );
 }
 
 export default App;
