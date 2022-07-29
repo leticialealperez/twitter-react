@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Form from '../Form/Form';
-import Tweet from '../Tweet/Tweet';
+import Form from '../../components/Form/Form';
+import Tweet from '../../components/Tweet/Tweet';
+
 
 const TimelineStyled = styled.div``;
 

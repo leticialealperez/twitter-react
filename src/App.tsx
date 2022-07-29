@@ -1,13 +1,15 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import GlobalStyled from './components/configs/GlobalStyles';
-import Timeline from './components/Timeline/Timeline';
+import AppRoutes from './routes/AppRoutes';
+import store from './store/store'
 
 function App() {
   return (
-    <React.Fragment>
+    <Provider store={store}>
       <GlobalStyled />
-      <Timeline />
-    </React.Fragment>
+      <AppRoutes/>
+    </Provider>
   );
 }
 
