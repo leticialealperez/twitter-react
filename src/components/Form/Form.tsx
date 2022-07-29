@@ -1,24 +1,41 @@
-import React, { FormEvent,  useEffect,  useState } from 'react';
+import React, { FormEvent,  useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import FormStyled from './FormStyled';
+import { adicionarTweet, ITweet } from '../../store/modules/timeline/timelinesSlice'
+import { useAppDispatch } from '../../store/modules/typehook';
 
 export default function Form() {
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(true); // começa desabilitado
   const [tweetInput, setTweetInput] = useState('');
   const imageUrl = 'https://avatars.githubusercontent.com/u/71561411?v=4';
+  const dispatch = useAppDispatch();
+  // assemelha-se ao 
+  /* addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // faço a lógica para savar os dados do forms
+  }); */
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    const novoTweet: ITweet = {
+      id: uuidv4(),
+      name: 'TechHelper Joinha da Growdev',
+      usename: '@xaxalautech',
+      imageUrl: 'https://avatars.githubusercontent.com/u/71561411?v=4',
+      message: tweetInput
+    }
+
+    // dispara a ação de criar
+    dispatch(adicionarTweet(novoTweet))
+
   };
 
   const handleChange = (value: string) => {
-    setIsDisabled(!value.trim());
+    setIsDisabled(!value.trim()); // habilita ou desabilita o botão de tweet - toogle
     setTweetInput(value);
   };
-
-  useEffect(() => { 
-    console.log(tweetInput);
-    console.log(isDisabled);
-  }, [tweetInput, isDisabled])
 
   return (
     <FormStyled>

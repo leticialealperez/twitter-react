@@ -6,7 +6,7 @@ const AppRoutes: React.FC = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Timeline/>}/>
+                <Route path="/" element={<Timeline />}/>
             </Routes>
         </BrowserRouter>
     )
