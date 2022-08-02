@@ -1,7 +1,7 @@
 import React, { FormEvent,  useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import FormStyled from './FormStyled';
-import { adicionarTweet, ITweet } from '../../store/modules/timeline/timelinesSlice'
+import { adicionarTweet, criarTweet, ITweet } from '../../store/modules/timeline/timelinesSlice'
 import { useAppDispatch } from '../../store/modules/typehook';
 
 export default function Form() {
@@ -19,16 +19,16 @@ export default function Form() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const novoTweet: ITweet = {
-      id: uuidv4(),
+    /* const novoTweet: ITweet = {
+      id: 1,
       name: 'TechHelper Joinha da Growdev',
       usename: '@xaxalautech',
       imageUrl: 'https://avatars.githubusercontent.com/u/71561411?v=4',
       message: tweetInput
-    }
+    } */
 
     // dispara a ação de criar
-    dispatch(adicionarTweet(novoTweet))
+    dispatch(criarTweet(tweetInput))
 
   };
 
